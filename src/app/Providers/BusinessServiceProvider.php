@@ -28,7 +28,7 @@ class BusinessServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->registerMigrations();
-
+            echo 'runing';
             $this->publishes([
                 __DIR__.'/../database/migrations' => database_path('migrations'),
             ], 'busibess-migrations');
@@ -49,5 +49,18 @@ class BusinessServiceProvider extends ServiceProvider
             //     Console\PurgeCommand::class,
             // ]);
         }
+    }
+
+    
+    /**
+     * Register Passport's migration files.
+     *
+     * @return void
+     */
+    protected function registerMigrations()
+    {
+        // if (Passport::$runsMigrations && ! config('passport.client_uuids')) {
+            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        // }
     }
 }
