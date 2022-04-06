@@ -1,0 +1,41 @@
+{
+    "name": "gomeetech/business",
+    "description": "library for Laravel Web3",
+    "authors": [
+        {
+            "name": "Doan LN",
+            "email": "developer.vcc@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gomee\\Business\\": "src/app/"
+        },
+        "files": [
+            "src/helpers/__load__.php"
+        ]
+    },
+    "require": {
+        "php": "^8.0.2",
+        "gomeetech/core": "dev-main",
+        "gomeetech/dev": "dev-main"
+    },
+    "config": {
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.4-dev"
+        },
+        "Gomee": {
+            "providers": [
+                "Gomee\\Business\\Providers\\BusinessServiceProvider"
+            ]
+        }
+    }
+}
