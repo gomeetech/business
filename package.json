@@ -9,9 +9,7 @@
     "exports": {
         "database": {
             "migrations": {
-                "clients": "2022_04_06_114251_create_clients_table.php",
-                "customers": "create_customers_table.php",
-                "orders": "2022_04_06_113743_alter_table_orders_add_test_column.php"
+                "clients": "2022_04_06_114251_create_clients_table.php"
             }
         },
         "views": [],
