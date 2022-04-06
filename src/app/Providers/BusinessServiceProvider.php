@@ -23,18 +23,17 @@ class BusinessServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'busibess');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'busibess');
 
 
         if ($this->app->runningInConsole()) {
             $this->registerMigrations();
-            echo 'runing';
             $this->publishes([
-                __DIR__.'/../database/migrations' => database_path('migrations'),
+                __DIR__.'/../../database/migrations' => database_path('migrations'),
             ], 'busibess-migrations');
 
             $this->publishes([
-                __DIR__.'/../resources/views' => base_path('resources/views/vendor/passport'),
+                __DIR__.'/../../resources/views' => base_path('resources/views/vendor/business'),
             ], 'busibess-views');
 
             // $this->publishes([
@@ -60,7 +59,7 @@ class BusinessServiceProvider extends ServiceProvider
     protected function registerMigrations()
     {
         // if (Passport::$runsMigrations && ! config('passport.client_uuids')) {
-            $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+            $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
         // }
     }
 }
