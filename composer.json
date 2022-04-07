@@ -13,7 +13,6 @@
             "Gomee\\Business\\": "src/app/"
         },
         "files": [
-            "bootstrap.php",
             "src/helpers/__load__.php"
         ]
     },
