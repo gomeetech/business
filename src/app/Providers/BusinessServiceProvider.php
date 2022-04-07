@@ -3,7 +3,6 @@
 namespace Gomee\Business\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Core\Package;
 
 class BusinessServiceProvider extends ServiceProvider
 {
@@ -16,9 +15,6 @@ class BusinessServiceProvider extends ServiceProvider
     {
         //
 
-        if (class_exists('Core\Package')) {
-            Package::register('business', __DIR__);
-        }
     }
 
     /**
@@ -28,7 +24,7 @@ class BusinessServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'busibess');
+        $this->loadViewsFrom(__DIR__ . '/../../views', 'busibess');
 
         // $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
@@ -40,7 +36,7 @@ class BusinessServiceProvider extends ServiceProvider
             ], 'busibess-migrations');
 
             $this->publishes([
-                __DIR__ . '/../../resources/views' => base_path('resources/views/vendor/business'),
+                __DIR__ . '/../../views' => base_path('resources/views/vendor/business'),
             ], 'busibess-views');
 
 

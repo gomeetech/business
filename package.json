@@ -7,13 +7,15 @@
     },
     "namespace": "Gomee\\Business",
     "exports": {
+        "assets": [],
         "database": {
             "migrations": {
                 "clients": "2022_04_06_114251_create_clients_table.php"
             }
         },
+        "providers": [],
         "views": [],
-        "assets": [],
-        "providers": []
+        "routes": []
+        
     }
 }
